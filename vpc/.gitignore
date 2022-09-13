@@ -1,2 +1,2 @@
-.terraform/
+vpc/.terraform/
 *terraform*
