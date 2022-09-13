@@ -1,2 +1,2 @@
-vpc/.terraform/**
-vpc/*terraform*
+*/.terraform/**
+*/*terraform*
