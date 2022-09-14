@@ -13,7 +13,7 @@ resource aws_vpc "a206399-torus-vpc-prod-use1" {
 ##Internet gateway###
 
 resource "aws_internet_gateway" "a206399-torus-igw-prod-use1" {
-	vpc = aws_vpc.a206399-enterprise-vpc-prod-use1.id
+	vpc_id = aws_vpc.a206399-enterprise-vpc-prod-use1.id
 	tags = {
 	  Name = var.igw_name
 	}
@@ -89,7 +89,7 @@ resource "aws_security_group" "a206399-torus-ec2-sg-prod-use1" {
 	    from_port = 22
 	    to_port = 22
 	    protocol = "tcp"
-	    cidr_block = [var.cidr_block]
+	    cidr_block = [var.allow_all_cidr_block]
 
 	  }
 	]
