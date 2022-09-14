@@ -13,7 +13,7 @@ resource aws_vpc "a206399-torus-vpc-prod-use1" {
 ##Internet gateway###
 
 resource "aws_internet_gateway" "a206399-torus-igw-prod-use1" {
-	vpc_id = aws_vpc.a206399-enterprise-vpc-prod-use1.id
+	vpc_id = aws_vpc.a206399-torus-vpc-prod-use1.id
 	tags = {
 	  Name = var.igw_name
 	}
