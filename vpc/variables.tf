@@ -28,7 +28,7 @@ variable "igw_name" {
 	default = "a206399-torus-igw-prod-use1"
 }
 
-variablr "public_subnets_cidr" {
+variable "public_subnets_cidr" {
 	description = "public_subnets_cidr"
 	type = string
 	default = "10.1.1.0/24"
@@ -46,7 +46,7 @@ variable "public_subnet_name" {
 	default = "a206399-torud-public-subnet-prod-use1"
 }
 
-variablr "private_subnets_cidr" {
+variable "private_subnets_cidr" {
 	description = "private_subnets_cidr"
 	type = string
 	default = "10.1.2.0/24"
@@ -65,7 +65,7 @@ variable "private_route_table_name" {
 }
 
 variable "sg_name" {
-	descriptio = "Secuirty group name"
+	description = "Secuirty group name"
 	type = string
 	default = "a206399-torus-ec2-sg-prod-use1"
 }
