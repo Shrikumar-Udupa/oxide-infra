@@ -91,7 +91,9 @@ resource "aws_security_group" "a206399-torus-ec2-sg-prod-use1" {
 	    protocol = "tcp"
 	    cidr_blocks = var.allow_all_cidr_block
             ipv6_cidr_blocks = var.allow_all_ipv6_cidr_block
-
+            prefix_list_ids = []
+            security_groups = []
+            self = []
 	  }
 	]
 	tags = {
