@@ -72,5 +72,6 @@ variable "sg_name" {
 
 variable "allow_all_cidr_block" {
 	description = "Security group Cidr"
-	default = "0.0.0.0/0"
+        type = string
+	default = ["0.0.0.0/0"]
 }
