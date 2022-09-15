@@ -75,3 +75,9 @@ variable "allow_all_cidr_block" {
         type = list(string)
 	default = ["0.0.0.0/0"]
 }
+
+variable "allow_all_ipv6_cidr_block" {
+        description = "Security group Cidr"
+        type = list(string)
+        default = ["::/0"]
+}
