@@ -89,7 +89,7 @@ resource "aws_security_group" "a206399-torus-ec2-sg-prod-use1" {
 	    from_port = 22
 	    to_port = 22
 	    protocol = "tcp"
-	    cidr_block = [var.allow_all_cidr_block]
+	    cidr_blocks = [var.allow_all_cidr_block]
 
 	  }
 	]
@@ -103,7 +103,7 @@ resource "aws_security_group_rule" "a206399-torus-ec2-rule-http-prod-use1" {
 	from_port = 80
 	to_port = 80
 	protocol = "tcp"
-	cidr_block = [var.allow_all_cidr_block]
+	cidr_blocks = [var.allow_all_cidr_block]
 	security_group_id = aws_security_group.a206399-torus-ec2-sg-prod-use1.id
 }
 
@@ -112,7 +112,7 @@ resource "aws_security_group_rule" "a206399-torus-ec2-rule-https-prod-use1" {
 	from_port = 443
 	to_port = 443
 	protocol = "tcp"
-	cidr_block = [var.allow_all_cidr_block]
+	cidr_blocks = [var.allow_all_cidr_block]
 	security_group_id = aws_security_group.a206399-torus-ec2-sg-prod-use1.id
 }
 
