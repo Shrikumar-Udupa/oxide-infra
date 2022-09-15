@@ -93,7 +93,7 @@ resource "aws_security_group" "a206399-torus-ec2-sg-prod-use1" {
             ipv6_cidr_blocks = var.allow_all_ipv6_cidr_block
             prefix_list_ids = []
             security_groups = []
-            self = []
+            self = true
 	  }
 	]
 	tags = {
