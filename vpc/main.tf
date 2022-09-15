@@ -106,7 +106,7 @@ resource "aws_security_group_rule" "a206399-torus-ec2-rule-http-prod-use1" {
 	protocol = "tcp"
 	cidr_blocks = var.allow_all_cidr_block
         ipv6_cidr_blocks = var.allow_all_ipv6_cidr_block
-	security_group_ids = aws_security_group.a206399-torus-ec2-sg-prod-use1.id
+	security_group_id = aws_security_group.a206399-torus-ec2-sg-prod-use1.id
 }
 
 resource "aws_security_group_rule" "a206399-torus-ec2-rule-https-prod-use1" {
@@ -117,6 +117,6 @@ resource "aws_security_group_rule" "a206399-torus-ec2-rule-https-prod-use1" {
 	cidr_blocks = var.allow_all_cidr_block
         ipv6_cidr_blocks = var.allow_all_ipv6_cidr_block
         prefix_list_ids = []
-	security_group_ids = aws_security_group.a206399-torus-ec2-sg-prod-use1.id
+	security_group_id = aws_security_group.a206399-torus-ec2-sg-prod-use1.id
 }
 
